@@ -5,6 +5,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.After;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -24,6 +25,11 @@ public class LoginStepDefs {
         this.driver = new FirefoxDriver();
         this.driver.manage().window().maximize();
         this.driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+    }
+
+    @After
+    public void tearDown(){
+        driver.quit();
     }
 
     @Given("^A User navigates to webdriveruniversity website$")
@@ -70,4 +76,7 @@ public class LoginStepDefs {
 
 
     }
+
+
+
 }
