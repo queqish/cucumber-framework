@@ -1,6 +1,5 @@
-package io.cucumber.skeleton;
+package io.cucumber.loginpage;
 
-import com.cucumber.listener.ExtentCucumberFormatter;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
@@ -8,13 +7,13 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {"pretty"},
-        features = "src/test/resources/io/cucumber/skeleton",
-        glue = "io.cucumber.skeleton",
+        features = "src/test/resources/io/cucumber/loginpage",
+        glue = "io.cucumber.loginpage",
         tags={},
         monochrome = true
 )
 
-public class RunCucumberTest {
+public class RunLoginPageTest {
         public static void main(String[] args) {
                 System.out.println("something");
         }

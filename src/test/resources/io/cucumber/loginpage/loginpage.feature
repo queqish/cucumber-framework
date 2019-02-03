@@ -18,4 +18,5 @@ Scenario: Login into account with incorrect credentials
 	When A User clicks on the login button
 	Then A User should be taken to the unsuccessful login page
 
+	#Parametryzacja
 	

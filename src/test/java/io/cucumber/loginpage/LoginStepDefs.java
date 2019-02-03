@@ -13,17 +13,17 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class LoginParametrisationdefs {
+public class LoginStepDefs {
 
     WebDriver driver;
 
     @Before()
     public void setup() {
         System.setProperty("webdriver.gecko.driver",
-                "/home/queqish/Desktop/Pulpit/CucumberFramework/cucumberFramework/src/test/java/resources/geckodriver");
+                "/home/queqish/Desktop/ProjektOgorek/trening-z-ogorkiem/src/test/resources/geckodriver");
         this.driver = new FirefoxDriver();
         this.driver.manage().window().maximize();
-        this.driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+        this.driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
     }
 
     @Given("^A User navigates to webdriveruniversity website$")
@@ -64,7 +64,7 @@ public class LoginParametrisationdefs {
     @Then("^A User should be taken to the unsuccessful login page$")
     public void aUserShouldBeTakenToTheUnsuccessfulLoginPage() throws InterruptedException {
 
-        Thread.sleep(5000);
+        Thread.sleep(1000);
         Alert alert = driver.switchTo().alert();
         Assert.assertEquals(alert.getText(), "validation failed");
 
