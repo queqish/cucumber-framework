@@ -10,13 +10,14 @@ import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
 public class LoginStepDefs {
 
-    WebDriver driver;
+    private WebDriver driver;
 
     @Before()
     public void setup() {

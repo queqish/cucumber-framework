@@ -1,25 +1,12 @@
-Feature: Send email via contact us form on webdriveruniversity.com website
-  User should be able to send email via form when enters correct email address
-  User should be able to reset form when he want to clear all textboxes
-  User should not be able to send email via form when enters inccorrect email address
+Feature: Submit data to webdriveruniversity.com using contact us form
 
-  Background:
-    Given A User navigates to webdriveruniversity website
-    And User enters first name
-    And User enters last name
-    And User enters Comment
-
-  Scenario:
-    Given User enters "user@webdriver.com" email address
-    When User clicks submit button
-    Then User should see correct message
-
-  Scenario:
-    Given User enters "incorrectemail" email address
-    When User clicks submit button
-    Then User should see error message
-
-  Scenario:
-    Given User enters "user@webdriver.com" email address
-    When User clicks reset button
-    Then All textboxes should be empty
+  Scenario: Submit valid data via contact us form
+    Given I access webdriveruniversity
+    When I click on the contact us button
+    And I enter a valid first name
+    And I enter a valid last name
+    And I enter a valid email address
+    And I enter comments
+      | example comment one | example comment two|
+    When I click on the submit button
+    Then the information should successfully be submitted via the contact us form
