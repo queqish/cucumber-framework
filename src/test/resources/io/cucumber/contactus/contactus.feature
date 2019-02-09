@@ -5,6 +5,7 @@ Feature: Submit data to webdriveruniversity.com using contact us form
     When I click on the contact us button
     And I enter a valid first name
     And I enter a valid last name
+    | Picasso | Pueblo|
     And I enter a valid email address
     And I enter comments
       | example comment one | example comment two|

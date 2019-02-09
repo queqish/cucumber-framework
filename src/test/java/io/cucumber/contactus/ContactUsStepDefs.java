@@ -6,6 +6,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.After;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,6 +26,14 @@ public class ContactUsStepDefs {
         this.driver = new ChromeDriver();
         this.driver.manage().window().maximize();
         this.driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+    }
+
+
+    @After
+    public void tearDown(){
+        driver.manage().deleteAllCookies();
+        driver.close();
+        driver.quit();
     }
 
     @Given("^I access webdriveruniversity$")
@@ -51,12 +60,19 @@ public class ContactUsStepDefs {
 
     }
 
-    @And("^I enter a valid last name$")
-    public void iEnterAValidLastName() {
 
-        driver.findElement(By.cssSelector("input[name='last_name']")).sendKeys("Pavo");
-
+    @When("^I enter a valid last name$")
+    public void i_enter_a_valid_last_name(DataTable arg1) throws Throwable {
+        List<List<String>> data = arg1.raw();
+        driver.findElement(By.cssSelector("input[name='last_name']")).sendKeys(data.get(0).get(0));
     }
+
+//    @And("^I enter a valid last name$")
+//    public void iEnterAValidLastName() {
+//
+//        driver.findElement(By.cssSelector("input[name='last_name']")).sendKeys("Pavo");
+//
+//    }
 
     @And("^I enter a valid email address$")
     public void iEnterAValidEmailAddress() {
@@ -78,5 +94,6 @@ public class ContactUsStepDefs {
 
     @Then("^the information should successfully be submitted via the contact us form$")
     public void theInformationShouldSuccessfullyBeSubmittedViaTheContactUsForm () {
+
     }
 }

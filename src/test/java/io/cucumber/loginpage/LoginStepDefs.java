@@ -30,6 +30,8 @@ public class LoginStepDefs {
 
     @After
     public void tearDown(){
+        driver.manage().deleteAllCookies();
+        driver.close();
         driver.quit();
     }
 
