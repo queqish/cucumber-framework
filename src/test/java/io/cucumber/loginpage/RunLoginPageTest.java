@@ -6,7 +6,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"pretty"},
+        plugin = {"pretty",
+                "html:target/cucumber",
+                "json:target/cucumber.json",
+                "com.cucumber.listener.ExtentCucumberFormatter:target/report.html"},
         features = "src/test/resources/io/cucumber/loginpage",
         glue = "io.cucumber.loginpage",
         tags={},
