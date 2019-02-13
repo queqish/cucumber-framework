@@ -1,16 +1,15 @@
 package io.cucumber.loginpage;
 
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.junit.After;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -22,7 +21,7 @@ public class LoginStepDefs {
     @Before()
     public void setup() {
         System.setProperty("webdriver.gecko.driver",
-                "/home/queqish/Desktop/ProjektOgorek/trening-z-ogorkiem/src/test/resources/geckodriver");
+                "/home/odnowa/IdeaProjects/cucumber-framework/src/test/resources/geckodriver");
         this.driver = new FirefoxDriver();
         this.driver.manage().window().maximize();
         this.driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);

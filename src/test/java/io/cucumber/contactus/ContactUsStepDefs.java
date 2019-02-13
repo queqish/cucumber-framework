@@ -1,16 +1,15 @@
 package io.cucumber.contactus;
 
 import cucumber.api.DataTable;
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.junit.After;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -22,7 +21,7 @@ public class ContactUsStepDefs {
     @Before()
     public void setup() {
         System.setProperty("webdriver.chrome.driver",
-                "/home/queqish/Desktop/ProjektOgorek/trening-z-ogorkiem/src/test/resources/chromedriver");
+                "/home/odnowa/IdeaProjects/cucumber-framework/src/test/resources/chromedriver");
         this.driver = new ChromeDriver();
         this.driver.manage().window().maximize();
         this.driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
