@@ -11,3 +11,5 @@ Feature: Submit data to webdriveruniversity.com using contact us form
       | example comment one | example comment two|
     When I click on the submit button
     Then the information should successfully be submitted via the contact us form
+
+    #DataTables

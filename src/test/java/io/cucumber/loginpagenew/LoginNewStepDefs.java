@@ -36,6 +36,7 @@ public class LoginNewStepDefs {
         driver.close();
         driver.quit();
     }
+
     @Given("^user navigates to \"([^\"]*)\"$")
     public void user_navigates_to(String url) throws Throwable {
         driver.get(url);  //http://www.webdriveruniversity.com/

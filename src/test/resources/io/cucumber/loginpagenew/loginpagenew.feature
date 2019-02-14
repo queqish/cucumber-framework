@@ -13,3 +13,5 @@ Feature: Login into account
       | 	url 							| 		username 		|		 password		 |		 message		 |
       |http://www.webdriveruniversity.com/|	webdriver3			|		wendriver 		 | validation failed     |
       |http://www.webdriveruniversity.com/|	webdriver			|		webdriver123	 | validation succeeded  |
+
+    #ScenarioOutline

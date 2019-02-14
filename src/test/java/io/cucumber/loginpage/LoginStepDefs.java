@@ -1,11 +1,12 @@
 package io.cucumber.loginpage;
 
-import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import cucumber.api.java.cs.Ale;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.After;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -35,7 +36,7 @@ public class LoginStepDefs {
     }
 
     @Given("^A User navigates to webdriveruniversity website$")
-    public void user_navigates_to_stackoverflow_website() throws Throwable {
+    public void user_navigates_to_webdriveruniversity_website() throws Throwable {
         driver.get("http://webdriveruniversity.com/Login-Portal/index.html");
     }
 
@@ -65,7 +66,9 @@ public class LoginStepDefs {
         Thread.sleep(1000); 
         Alert alert = driver.switchTo().alert();
         Assert.assertEquals(alert.getText(), "validation succeeded");
-
+        Thread.sleep(5000);
+        alert.accept();
+        Thread.sleep(5000);
 
     }
 
@@ -75,7 +78,9 @@ public class LoginStepDefs {
         Thread.sleep(1000);
         Alert alert = driver.switchTo().alert();
         Assert.assertEquals(alert.getText(), "validation failed");
-
+        Thread.sleep(5000);
+        alert.accept();
+        Thread.sleep(5000);
 
     }
 
