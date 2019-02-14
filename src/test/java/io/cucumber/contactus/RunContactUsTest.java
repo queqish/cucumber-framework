@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
                 "com.cucumber.listener.ExtentCucumberFormatter:target/report.html"},
         features = "src/test/resources/io/cucumber/contactus",
         glue = "io.cucumber.contactus",
-        tags={},
+        tags={"@Important"},
         monochrome = true
 )
 
