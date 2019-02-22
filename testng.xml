@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="cucumber-framework">
+    <test name="Cucucmber Tests" junit="true">
+        <classes>
+            <class name= "io.cucumber.contactus.RunContactUsTest"/>
+            <class name= "io.cucumber.loginpage.RunLoginPageTest"/>
+        </classes>
+    </test>
+</suite>

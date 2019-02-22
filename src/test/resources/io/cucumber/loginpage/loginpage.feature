@@ -19,4 +19,3 @@ Scenario: Login into account with incorrect credentials
 	Then A User should be taken to the unsuccessful login page
 
 	#Parametryzacja
-	
