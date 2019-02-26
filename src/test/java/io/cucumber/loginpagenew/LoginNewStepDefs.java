@@ -24,7 +24,7 @@ public class LoginNewStepDefs {
     @Before()
     public void setup() {
         System.setProperty("webdriver.chrome.driver",
-                "/home/queqish/Desktop/ProjektOgorek/trening-z-ogorkiem/src/test/resources/chromedriver");
+                "/home/odnowa/IdeaProjects/cucumber-framework/src/test/resources/chromedriver");
         this.driver = new ChromeDriver();
         this.driver.manage().window().maximize();
         this.driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);

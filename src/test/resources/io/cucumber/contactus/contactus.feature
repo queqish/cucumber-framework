@@ -40,3 +40,4 @@ Feature: Submit data to webdriveruniversity.com using contact us form
     Then the information should successfully be submitted via the contact us form
 
     #DataTables
+    #TAGS

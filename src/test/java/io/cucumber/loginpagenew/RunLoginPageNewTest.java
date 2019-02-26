@@ -1,4 +1,4 @@
-package io.cucumber.contactus;
+package io.cucumber.loginpagenew;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -10,13 +10,13 @@ import org.junit.runner.RunWith;
                 "html:target/cucumber",
                 "json:target/cucumber.json",
                 "com.cucumber.listener.ExtentCucumberFormatter:target/report.html"},
-        features = "src/test/resources/io/cucumber/contactus",
-        glue = "io.cucumber.contactus",
-        tags={"@Important"}, //will run scenarios with important tag only
+        features = "src/test/resources/io/cucumber/loginpagenew",
+        glue = "io.cucumber.loginpagenew",
+        tags={},
         monochrome = true
 )
 
-public class RunContactUsTest {
+public class RunLoginPageNewTest {
         public static void main(String[] args) {
                 System.out.println("something");
         }
